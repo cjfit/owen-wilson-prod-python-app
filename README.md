@@ -1,7 +1,29 @@
-## Sample Owen Wilson Prod-Ready Python App
+## Sample Owen Wilson API Prod-Ready Python App
 
 Consumes the Owen Wilson Wow API (https://owen-wilson-wow-api.onrender.com/).
-An initial CSV input file of movie names, release years, and IMDb ratings is at data/input.csv. This data is combined with "wow" data and written6 to a new CSV.
+An initial CSV input file of movie names, release years, and IMDb ratings is at data/input.csv. This data is combined with "wow" API data and written to a new CSV.
+
+### Example Input (data/input.csv)
+
+| Movie Name   | Release Year | Rating | id  |
+|--------------|-----|--------|-----|
+| Cars         | 2006 | 7.2    | 11  |
+| The Darjeeling Limited | 2007 | 7.2    | 13  |
+| Marley & Me | 2008 | 7.0    | 15  |
+| The Internship | 2013 | 6.3    | 22  |
+
+
+### Example Output
+
+| Movie Name   | Release Year | Rating | id  |  Total Wows  |  Full Line  |
+|--------------|-----|--------|-----|---|---|
+| Cars         | 2006 | 7.2    | 11  |5|Wow! What is this place?
+| The Darjeeling Limited | 2007 | 7.2    | 13  |1|Wow. Right?
+| Marley & Me | 2008 | 7.0    | 15  |3|Four for four. Wow.
+| The Internship | 2013 | 6.3    | 22  |5|Wow! Seven projects.
+
+
+
 ### Running tests
 Navigate to the tests/ directory and run `pytest`
 ### Instructions for use
